@@ -1,0 +1,118 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 20px;
+  &__logo-container {
+    font-family: 'Lilita One', cursive;
+    color: #da5964;
+    font-weight: 700;
+    font-size: 38px;
+  }
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__burger-container {
+    justify-content: center;
+    align-items: center;
+    display: none;
+    padding: 5px;
+    transition: all 0.1s ease-in;
+    @media(max-width:800px){
+      display: flex;
+    }
+    &:hover {
+      border-radius: 40%;
+      cursor: pointer;
+      background-color: #ec9aa1;
+    }
+  }
+  &__options-container {
+    width: 650px;
+    display: flex;
+    list-style: none;
+    font-size: 40px;
+    justify-content: space-between;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 3px;
+    @media(max-width:1115px){
+      font-size: 20px;
+    }
+    @media(max-width:800px){
+      display: none;
+    }
+    & li {
+      transition: all 0.1s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        border-bottom: 3px solid #da5964;
+      }
+    }
+  }
+}
+
+.modal__navbar {
+  &-background{
+    display: none;
+    background-color: transparent;
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Color semi-transparente */
+    z-index: 10;
+    @media(min-width:800px){
+      display: none;
+    }
+  }
+  width: 220px;
+  height: 100vh;
+  background-color: white;
+  &-list{
+    margin-top: 70px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: space-between;
+    height: 25%;
+    &-link{
+      color: #da5964;
+      transition: all 0.1s ease-in-out;
+      width: 100px;
+      &:hover{
+        font-size: 22px;
+        cursor: pointer;
+        border-bottom: 3px solid #74c2e1;
+      }
+    }
+  }
+  &-close-icon{
+    &__container{
+      display: flex;
+      width: 40px;
+      position: relative;
+      top: 22px;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      left: 10px;
+      transition: all 0.1s ease-in-out;
+      &:hover{
+        cursor: pointer;
+        border-bottom:3px solid #74c2e1;
+        width: 42px;
+      }
+    }
+    width: 25px;
+    
+
+  }
+}
+
+
