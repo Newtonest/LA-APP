@@ -8,7 +8,7 @@
     align-items: center;
     flex-direction: column;;
     &__main{
-        width: 80%;
+        width: 81%;
         height: 3700px;
         top: 110px;
         position: relative;
@@ -29,11 +29,8 @@
                 padding:3px;
                 border-bottom: 3px solid #5aabcb;
                 transition: all 0.2s ease-in-out;
-                @media(max-width:1115px){
-                    font-size: 60px;
-                }
                 @media(max-width:600px){
-                    font-size: 30px;
+                    font-size: 60px;
                 }
                 &:hover{
                     transform: scale(1.2);
@@ -74,6 +71,7 @@
                 font-size: 80px;
                 font-weight: 900;
                 color: #9c222c;  
+                text-align: center;
                 & span{
                     font-size: 86px;
                     font-weight: 100;
@@ -90,7 +88,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        position: fixed;
+        position: absolute;
         top: 150px;
         left: 12px;
         text-align: center;

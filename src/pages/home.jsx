@@ -1,7 +1,22 @@
 import { Navbar } from "../components/navbar";
 import { Link } from "react-router-dom";
-
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
+import { Footer } from "../components/footer";
 export function Home() {
+  useEffect(() =>{
+    ScrollReveal().reveal('.home__main',{
+       duration: 3000,
+       origin: 'top',
+       distance:'100px'
+    });
+
+    ScrollReveal().reveal('home__fixed',{
+      duration: 3000,
+      origin: 'top',
+      distance:'100px'
+    })
+  },[])
   return (
     <div className="home">
       <Navbar />
@@ -20,7 +35,6 @@ export function Home() {
         </div>
         <div className="home__main-match__container">
           <h1>BE <span>JUGDGED</span></h1>
-          <img src="" alt="" />
         </div>
         <div className="home__main-description-container">
           <article className="home__main-description-subcontainer">
@@ -29,7 +43,8 @@ export function Home() {
             </div>
             <main className="home__main-description__rectangle">
                 <div className="home__main-description__rectangle-match__container">
-                  <button className="home__main-description__rectangle-match__button"></button>
+                  <button className="home__main-description__rectangle-match__button">PLAY NOW</button>
+                  <p>BE ONE MORE ANIMAL OF THE ANIMAL KINGDOM</p>
                 </div>
             </main>
           </article>
@@ -37,7 +52,7 @@ export function Home() {
         
         <div className="home__main-history-container"></div>
       </main>
-      <footer className="home__footer">footer</footer>
+      <Footer/>
     </div>
   );
 }
